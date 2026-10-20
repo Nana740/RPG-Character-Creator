@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nana Asare -RPG Character Creator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+  <header class="hero-header">
+    <h1>RPG Character Creator</h1>
+    <p>Choose your class, weapon and armor, then see your hero's power grow.</p>
+  </header>
+ 
+  <main class="character-forge">
+ 
+    <!-- LEFT COLUMN: the options the player clicks -->
+    <section class="hero-options-panel" id="hero-options-panel">
+ 
+      <div class="hero-choice-section">
+        <h2>1. Character Class</h2>
+        <div class="hero-choice-group" id="class-option-group">
+          <button class="hero-option class-option" id="warrior-class-btn">Warrior (+8 ATK / +12 DEF)</button>
+          <button class="hero-option class-option" id="mage-class-btn">Mage (+14 ATK / +5 DEF)</button>
+        </div>
+      </div>
+ 
+      <div class="hero-choice-section">
+        <h2>2. Weapon Type</h2>
+        <div class="hero-choice-group" id="weapon-option-group">
+          <button class="hero-option weapon-option" id="iron-sword-btn">Iron Sword (+12 ATK / +2 DEF)</button>
+          <button class="hero-option weapon-option" id="war-axe-btn">War Axe (+16 ATK / +0 DEF)</button>
+          <button class="hero-option weapon-option" id="arcane-staff-btn">Arcane Staff (+14 ATK / +1 DEF)</button>
+        </div>
+      </div>
+ 
+      <div class="hero-choice-section">
+        <h2>3. Armor Type</h2>
+        <div class="hero-choice-group" id="armor-option-group">
+          <button class="hero-option armor-option" id="plate-armor-btn">Plate Armor (+0 ATK / +16 DEF)</button>
+          <button class="hero-option armor-option" id="leather-armor-btn">Leather Armor (+4 ATK / +10 DEF)</button>
+          <button class="hero-option armor-option" id="mage-robe-btn">Mage Robe (+9 ATK / +6 DEF)</button>
+        </div>
+      </div>
+ 
+    </section>
+ 
+    <!-- RIGHT COLUMN: the live hero sheet -->
+    <aside class="hero-sheet" id="hero-sheet">
+      <h2>Your Hero</h2>
+ 
+      <ul class="hero-gear-list" id="hero-gear-list">
+        <li id="hero-class-line">Class: Not chosen</li>
+        <li id="hero-weapon-line">Weapon: Not chosen</li>
+        <li id="hero-armor-line">Armor: Not chosen</li>
+      </ul>
+ 
+      <div class="hero-stat-block">
+        <div class="hero-stat-row">
+          <span class="hero-stat-label">Total Attack</span>
+          <span class="hero-stat-value" id="total-attack">0</span>
+        </div>
+        <div class="hero-stat-track"><div class="hero-stat-bar attack-bar" id="attack-bar"></div></div>
+      </div>
+ 
+      <div class="hero-stat-block">
+        <div class="hero-stat-row">
+          <span class="hero-stat-label">Total Defense</span>
+          <span class="hero-stat-value" id="total-defense">0</span>
+        </div>
+        <div class="hero-stat-track"><div class="hero-stat-bar defense-bar" id="defense-bar"></div></div>
+      </div>
+ 
+      <p class="hero-playstyle" id="hero-playstyle">Choose a class, weapon and armor to begin your legend.</p>
+ 
+      <button class="reset-hero-btn" id="reset-hero-btn">Reset Character</button>
+    </aside>
+ 
+  </main>
+ 
+  <footer class="forge-footer">
+    <p>RPG Character Creator &bull; Nana Asare</p>
+  </footer>
+    
+ <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #14111f;
+  color: #ece6f5;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+ 
+/* ---------- Header ---------- */
+.hero-header {
+  text-align: center;
+  padding: 40px 16px 24px;
+}
+ 
+.hero-header h1 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  color: #e0b84a;
+  letter-spacing: 1px;
+}
+ 
+.hero-header p {
+  margin: 0;
+  color: #b3a9c9;
+  font-size: 17px;
+}
+ 
+/* ---------- Two-column layout (CSS Grid) ---------- */
+.character-forge {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+ 
+/* ---------- Left column: options ---------- */
+.hero-options-panel {
+  background-color: #1f1a2e;
+  border: 1px solid #332b4a;
+  border-radius: 14px;
+  padding: 24px;
+}
+ 
+.hero-choice-section {
+  margin-bottom: 26px;
+}
+ 
+.hero-choice-section:last-child {
+  margin-bottom: 0;
+}
+ 
+.hero-choice-section h2 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  color: #e0b84a;
+}
+ 
+.hero-choice-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+ 
+.hero-option {
+  padding: 14px 12px;
+  font-size: 15px;
+  color: #ece6f5;
+  background-color: #2a2340;
+  border: 2px solid #3c3258;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+ 
+/* Hover state for every option button */
+.hero-option:hover {
+  background-color: #382e58;
+  border-color: #e0b84a;
+}
+ 
+.hero-option:focus-visible,
+.reset-hero-btn:focus-visible {
+  outline: 3px solid #e0b84a;
+  outline-offset: 2px;
+}
+ 
+/* The option the player has chosen */
+.chosen-hero-option {
+  background-color: #e0b84a;
+  border-color: #e0b84a;
+  color: #1a1426;
+  font-weight: bold;
+}
+ 
+.chosen-hero-option:hover {
+  background-color: #f0cb5f;
+}
+ 
+/* ---------- Right column: hero sheet ---------- */
+.hero-sheet {
+  align-self: start;
+  position: sticky;
+  top: 20px;
+  background-color: #1f1a2e;
+  border: 1px solid #332b4a;
+  border-top: 4px solid #e0b84a;
+  border-radius: 14px;
+  padding: 24px;
+}
+ 
+.hero-sheet h2 {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+}
+ 
+.hero-gear-list {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+}
+ 
+.hero-gear-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #332b4a;
+  font-size: 16px;
+}
+ 
+.hero-stat-block {
+  margin-bottom: 16px;
+}
+ 
+.hero-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+ 
+.hero-stat-label {
+  color: #b3a9c9;
+  font-size: 15px;
+}
+ 
+.hero-stat-value {
+  font-size: 30px;
+  font-weight: bold;
+}
+ 
+.hero-stat-track {
+  height: 12px;
+  background-color: #2a2340;
+  border-radius: 999px;
+  overflow: hidden;
+}
+ 
+.hero-stat-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  transition: width 0.3s;
+}
+ 
+.attack-bar {
+  background-color: #e5584f;
+}
+ 
+.defense-bar {
+  background-color: #4f9de5;
+}
+ 
+.hero-playstyle {
+  margin: 20px 0;
+  padding: 12px;
+  background-color: #2a2340;
+  border-radius: 10px;
+  font-style: italic;
+  color: #d9cfee;
+}
+ 
+.reset-hero-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #b8413a;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.15s;
+}
+ 
+/* Hover state for the reset button */
+.reset-hero-btn:hover {
+  background-color: #d4524a;
+}
+ 
+/* ---------- Footer ---------- */
+.forge-footer {
+  text-align: center;
+  padding: 28px 16px;
+  color: #8a80a3;
+  font-size: 14px;
+}
+ 
+.forge-footer p {
+  margin: 0;
+}
+ 
+/* ---------- Responsive: one column on tablets and phones ---------- */
+@media (max-width: 768px) {
+  .character-forge {
+    grid-template-columns: 1fr;
+  }
+ 
+  .hero-sheet {
+    position: static;
+  }
+ 
+  .hero-header h1 {
+    font-size: 30px;
+  }
+}
